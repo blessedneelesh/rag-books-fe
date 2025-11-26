@@ -1,0 +1,240 @@
+/* Fluent UI CSS Configuration */
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap');
+
+:root {
+  /* Fluent Design System Colors */
+  --primary-color: #0078d4;
+  --primary-hover: #106ebe;
+  --primary-pressed: #005a9e;
+  --secondary-color: #f3f2f1;
+  --neutral-background: #faf9f8;
+  --neutral-foreground: #323130;
+  --neutral-stroke: #e1dfdd;
+  --surface-background: #ffffff;
+  --surface-stroke: #e1dfdd;
+  
+  /* Semantic Colors */
+  --success-color: #107c10;
+  --warning-color: #ff8c00;
+  --error-color: #d13438;
+  --info-color: #0078d4;
+  
+  /* Typography */
+  --font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+  --font-size-100: 10px;
+  --font-size-200: 12px;
+  --font-size-300: 14px;
+  --font-size-400: 16px;
+  --font-size-500: 20px;
+  --font-size-600: 24px;
+  --font-size-700: 28px;
+  --font-size-800: 32px;
+  --font-size-900: 40px;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 12px;
+  --spacing-l: 16px;
+  --spacing-xl: 20px;
+  --spacing-xxl: 24px;
+  --spacing-xxxl: 32px;
+  
+  /* Border Radius */
+  --border-radius-small: 2px;
+  --border-radius-medium: 4px;
+  --border-radius-large: 8px;
+  
+  /* Shadows */
+  --shadow-2: 0 1px 2px rgba(0, 0, 0, 0.14), 0 0px 2px rgba(0, 0, 0, 0.12);
+  --shadow-4: 0 2px 4px rgba(0, 0, 0, 0.14), 0 0px 4px rgba(0, 0, 0, 0.12);
+  --shadow-8: 0 4px 8px rgba(0, 0, 0, 0.14), 0 0px 8px rgba(0, 0, 0, 0.12);
+  --shadow-16: 0 8px 16px rgba(0, 0, 0, 0.14), 0 0px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Global Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-300);
+  line-height: 1.4;
+  color: var(--neutral-foreground);
+  background-color: var(--neutral-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fluent Component Styles */
+.fluent-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-medium);
+  padding: var(--spacing-s) var(--spacing-l);
+  font-family: var(--font-family);
+  font-size: var(--font-size-300);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  outline: none;
+}
+
+.fluent-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.fluent-button:active {
+  background-color: var(--primary-pressed);
+}
+
+.fluent-button:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.fluent-button-secondary {
+  background-color: var(--surface-background);
+  color: var(--neutral-foreground);
+  border: 1px solid var(--neutral-stroke);
+}
+
+.fluent-button-secondary:hover {
+  background-color: var(--secondary-color);
+}
+
+.fluent-input {
+  padding: var(--spacing-s) var(--spacing-m);
+  border: 1px solid var(--neutral-stroke);
+  border-radius: var(--border-radius-medium);
+  font-family: var(--font-family);
+  font-size: var(--font-size-300);
+  background-color: var(--surface-background);
+  color: var(--neutral-foreground);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.fluent-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+.fluent-card {
+  background-color: var(--surface-background);
+  border: 1px solid var(--surface-stroke);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-2);
+  padding: var(--spacing-l);
+  transition: box-shadow 0.15s ease;
+}
+
+.fluent-card:hover {
+  box-shadow: var(--shadow-4);
+}
+
+.fluent-surface {
+  background-color: var(--surface-background);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-2);
+}
+
+/* Typography Classes */
+.text-caption {
+  font-size: var(--font-size-200);
+  font-weight: 400;
+}
+
+.text-body {
+  font-size: var(--font-size-300);
+  font-weight: 400;
+}
+
+.text-subtitle {
+  font-size: var(--font-size-400);
+  font-weight: 600;
+}
+
+.text-title {
+  font-size: var(--font-size-500);
+  font-weight: 600;
+}
+
+.text-large-title {
+  font-size: var(--font-size-700);
+  font-weight: 600;
+}
+
+/* Layout Utilities */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.gap-xs { gap: var(--spacing-xs); }
+.gap-s { gap: var(--spacing-s); }
+.gap-m { gap: var(--spacing-m); }
+.gap-l { gap: var(--spacing-l); }
+.gap-xl { gap: var(--spacing-xl); }
+
+.p-xs { padding: var(--spacing-xs); }
+.p-s { padding: var(--spacing-s); }
+.p-m { padding: var(--spacing-m); }
+.p-l { padding: var(--spacing-l); }
+.p-xl { padding: var(--spacing-xl); }
+
+.m-xs { margin: var(--spacing-xs); }
+.m-s { margin: var(--spacing-s); }
+.m-m { margin: var(--spacing-m); }
+.m-l { margin: var(--spacing-l); }
+.m-xl { margin: var(--spacing-xl); }
+
+/* Status Colors */
+.text-success { color: var(--success-color); }
+.text-warning { color: var(--warning-color); }
+.text-error { color: var(--error-color); }
+.text-info { color: var(--info-color); }
+
+/* Loading Animation */
+.loading-spinner {
+  border: 2px solid var(--neutral-stroke);
+  border-top: 2px solid var(--primary-color);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --spacing-xs: 2px;
+    --spacing-s: 4px;
+    --spacing-m: 8px;
+    --spacing-l: 12px;
+    --spacing-xl: 16px;
+    --spacing-xxl: 20px;
+    --spacing-xxxl: 24px;
+  }
+  
+  .fluent-card {
+    padding: var(--spacing-m);
+  }
+}
